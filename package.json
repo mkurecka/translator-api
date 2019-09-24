@@ -1,0 +1,44 @@
+{
+  "name": "translator-api",
+  "version": "1.0.0",
+  "description": "Translate your text",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build:live",
+    "build": "tsc -p .",
+    "build:live": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts"
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "tslint --fix -c tslint.json",
+      "prettier --parser typescript --write",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkurecka/translator-api.git"
+  },
+  "author": "Michal Kurecka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mkurecka/translator-api/issues"
+  },
+  "homepage": "https://github.com/mkurecka/translator-api#readme",
+  "dependencies": {
+    "@types/request-promise": "^4.1.44",
+    "express": "^4.17.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.1",
+    "nodemon": "^1.19.1",
+    "prettier": "^1.18.2",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.19.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.5.3"
+  }
+}
