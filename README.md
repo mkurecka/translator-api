@@ -27,3 +27,7 @@ Homepage: (should show OK status)
 
 ### API point with sample request:
 `http://localhost:3000/api/translate/cs/en/text=Jak se máš? Dnes je pondělí`
+
+### Example response (JSON)
+
+`{"sourceLang":"cs","targetLang":"en","translation":"How are you","text":"Jak se máš"}`
